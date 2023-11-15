@@ -6,7 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
 
-  // Define a Swagger document
+// Define a Swagger document
   const config = new DocumentBuilder()
   .setTitle('Events-Manger')
   .setDescription('Planing and Hosting Events stress free.')
@@ -15,7 +15,8 @@ async function bootstrap() {
 
   const document = SwaggerModule.createDocument(app, config);
 
-  // Configure Swagger
+// Configure Swagger
+
   SwaggerModule.setup('api', app, document);
   await app.listen(3999);
 }
